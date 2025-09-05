@@ -62,7 +62,7 @@ async function handleButtonInteraction(interaction) {
         } else {
           await interaction.reply({ 
             content: 'Terjadi kesalahan saat memproses permintaan Anda.', 
-            ephemeral: true 
+            flags: 64 // MessageFlags.Ephemeral
           });
         }
       } catch (replyError) {

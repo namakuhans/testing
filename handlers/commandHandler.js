@@ -102,7 +102,7 @@ async function handleSlashCommand(interaction) {
         } else {
           await interaction.reply({ 
             content: 'Terjadi kesalahan saat memproses command Anda.', 
-            ephemeral: true 
+            flags: 64 // MessageFlags.Ephemeral
           });
         }
       } catch (replyError) {
