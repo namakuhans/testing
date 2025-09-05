@@ -121,7 +121,7 @@ async function createTicketChannel(guild, channelName, categoryId, allowedUserId
     const ticketChannel = await guild.channels.create({
       name: channelName,
       type: ChannelType.GuildText,
-      parent: categoryId,
+      parent: ticketCategory.id,
       permissionOverwrites: permissionOverwrites,
     });
     
